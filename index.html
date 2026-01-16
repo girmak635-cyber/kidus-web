@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kidus Girma - Personal Website</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <h2>Menu</h2>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('developer')">Developer Info</button>
+  </div>
+
+  <!-- Hero -->
+  <header>
+    <img src="images/hero.jpg.webp" alt="Nature Hero Image" class="hero-image" />
+    <h1>Welcome</h1>
+    <p>This website is developed by Kidus Girma</p>
+  </header>
+
+  <!-- Intro -->
+  <section id="intro">
+    <h2>About Me</h2>
+    <p>
+      I am a mentally strong person who believes in myself and overcomes every challenge in life with God’s guidance. 
+      People should know that I am a good person with a kind heart, caring for those who care for me. 
+      Even if someone hates me, I do not hate back — I simply let them go. 
+      My passion is creating something new to generate income, and I strive to live with purpose.
+    </p>
+    <p>
+      I earned my high school degree from BNB Secondary School. Currently, I am a third-year GIS student at Hawassa University, Wendo Genet College, while also following a weekend Business Management program at Pharma College. 
+      I am actively engaged in business: buying and selling, working as a broker, managing a café and a small hotel, handling social media, video editing, and performing as a singer at events.
+    </p>
+  </section>
+
+  <!-- Hidden Sections -->
+  <section id="about" class="hidden">
+    <h2>About</h2>
+    <p>
+      I am curious and motivated by impact. My GIS research focuses on accuracy in geospatial data, while my business studies sharpen my ability to manage, lead, and innovate. 
+      I believe combining geospatial knowledge with business strategy creates powerful opportunities for growth and problem-solving.
+    </p>
+  </section>
+
+  <section id="contact" class="hidden">
+    <h2>Contact</h2>
+    <p>Email: kidusgirma52@gmail.com</p>
+    <p>Phone: 0967062503</p>
+    <p>Instagram: @kidu5_g</p>
+    <p>hu id: 0850-15</p>
+  </section>
+
+  <section id="developer" class="hidden">
+    <h2>Developer Info</h2>
+    <p>
+      I have taken web development tutorials before, so I am not new to this field. 
+      I enjoy building clean, interactive interfaces using HTML, CSS, and JavaScript. 
+      This website is part of my journey to practice design, coding, and creativity.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Kidus Girma — Life is full of challenges. If you live a normal life, you are not truly living. Explore, try something new, and discover what you don’t know.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        if (section.id === id || section.id === 'intro') {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
